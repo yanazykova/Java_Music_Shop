@@ -10,7 +10,7 @@ public class PianoTest {
 
     @Before
     public void setup(){
-        piano1 = new Piano("Grand", "Plink Plink Plink", 100.50, 150.00, 2);
+        piano1 = new Piano("Grand", "Plink Plink Plink", 100.00, 150.00, 2);
     }
 
     @Test
@@ -25,7 +25,7 @@ public class PianoTest {
 
     @Test
     public void hasPriceBought() {
-        assertEquals(100.50, piano1.getPriceBought(), 00.00);
+        assertEquals(100.00, piano1.getPriceBought(), 00.00);
     }
 
     @Test
@@ -42,4 +42,10 @@ public class PianoTest {
     public void canPlay(){
         assertEquals("Playing: Plink Plink Plink", piano1.play("Plink Plink Plink"));
     }
+
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(50.00, piano1.calculateMarkup(100.00, 150.00), 50.00);
+    }
 }
+

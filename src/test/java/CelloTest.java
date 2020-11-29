@@ -10,7 +10,7 @@ public class CelloTest {
 
     @Before
     public void setup(){
-        cello1 = new Cello("Performer", "Pling Pling Pling", 13.45, 24.35, "wooden");
+        cello1 = new Cello("Performer", "Pling Pling Pling", 20.00, 40.00, "wooden");
     }
 
     @Test
@@ -25,12 +25,12 @@ public class CelloTest {
 
     @Test
     public void hasPriceBought() {
-        assertEquals(13.45, cello1.getPriceBought(), 00.00);
+        assertEquals(20.00, cello1.getPriceBought(), 00.00);
     }
 
     @Test
     public void hasPriceSell(){
-        assertEquals(24.35, cello1.getPriceSell(), 00.00);
+        assertEquals(40.00, cello1.getPriceSell(), 00.00);
     }
 
     @Test
@@ -41,5 +41,10 @@ public class CelloTest {
     @Test
     public void canPlay(){
         assertEquals("Playing: Pling Pling Pling", cello1.play("Pling Pling Pling"));
+    }
+
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(20.00, cello1.calculateMarkup(20.00, 40.00), 20.00);
     }
 }

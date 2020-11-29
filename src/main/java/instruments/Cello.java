@@ -26,4 +26,8 @@ public class Cello extends Instrument {
     }
 
 
+    @Override
+    public double canCalculateMarkup(double priceBought, double priceSell) {
+        return 0;
+    }
 }
