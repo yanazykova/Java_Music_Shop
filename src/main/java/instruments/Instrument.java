@@ -34,7 +34,7 @@ public abstract class Instrument implements IPlay, ISell {
     }
 
     public String play(String sound) {
-            return "playing: " + sound;
+        return "playing: " + sound;
     }
 
 
