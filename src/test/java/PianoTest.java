@@ -42,7 +42,4 @@ public class PianoTest {
     public void canPlay(){
         assertEquals("Playing: Plink Plink Plink", piano1.play("Plink Plink Plink"));
     }
-
-
-
 }
