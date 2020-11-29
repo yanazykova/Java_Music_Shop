@@ -1,21 +1,29 @@
 package instruments;
 
 public class Guitar extends Instrument {
-    private int string;
+    private int strings;
 
-    public Guitar(String name, int priceBought, int priceSell, int pedal) {
-        super(name, priceBought, priceSell);
-        this.string = string;
+    public Guitar(String type, String sound, double priceBought, double priceSell, int strings) {
+        super(type, sound, priceBought, priceSell);
+        this.strings = strings;
     }
 
-    public int getString(){
-        return this.string;
+    public String getType(){
+
+        return this.type;
+    }
+
+    public String getSound() {
+        return this.sound;
+    }
+
+    public int getStringsNumber(){
+        return this.strings;
     }
 
 
-
-    public String play(String data) {
-        return "Playing: " + data;
+    public String play(String sound) {
+        return "Playing: " + this.sound;
     }
 
 

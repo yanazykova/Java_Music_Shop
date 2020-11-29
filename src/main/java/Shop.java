@@ -2,7 +2,7 @@ import behaviour.ISell;
 
 import java.util.ArrayList;
 
-public abstract class Shop implements ISell {
+public class Shop {
         private String name;
         private ArrayList<ISell> stock;
 
@@ -22,4 +22,5 @@ public abstract class Shop implements ISell {
         public ISell removeItemFromStock(int item){
             return stock.remove(item);
         }
+
 }

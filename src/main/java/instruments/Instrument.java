@@ -6,19 +6,19 @@ import behaviour.ISell;
 public abstract class Instrument implements IPlay, ISell {
     private final double priceBought;
     private final double priceSell;
-    protected String name;
+    protected String type;
     protected String sound;
 
 
-    public Instrument(String name, String sound, double priceBought, double priceSell) {
-        this.name = name;
+    public Instrument(String type, String sound, double priceBought, double priceSell) {
+        this.type = type;
         this.sound = sound;
         this.priceBought = priceBought;
         this.priceSell = priceSell;
     }
 
-    public String getName(){
-        return this.name;
+    public String getType(){
+        return this.type;
     }
 
     public String getSound(){
@@ -35,5 +35,11 @@ public abstract class Instrument implements IPlay, ISell {
 
     public String play(String sound) {
             return "playing: " + sound;
+    }
+
+
+    public double calculateMarkup(double priceBought, double priceSell){
+        double markUpPrice = this.priceSell - this.priceBought;
+        return  markUpPrice;
     }
 }

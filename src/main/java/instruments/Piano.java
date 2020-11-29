@@ -3,18 +3,18 @@ package instruments;
 public class Piano extends Instrument {
     private int pedal;
 
-    public Piano(String name, int priceBought, int priceSell, int pedal) {
-        super(name, priceBought, priceSell);
+    public Piano(String name, String sound, double priceBought, double priceSell, int pedal) {
+        super(name, sound, priceBought, priceSell);
         this.pedal = pedal;
     }
 
-    public int getPedal(){
+    public int getPedalsNumber(){
         return this.pedal;
     }
 
 
-    public String play(String data) {
-        return "Playing: " + data;
+    public String play(String sound) {
+        return "Playing: " + sound;
     }
 
 
