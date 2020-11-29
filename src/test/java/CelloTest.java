@@ -42,7 +42,4 @@ public class CelloTest {
     public void canPlay(){
         assertEquals("Playing: Pling Pling Pling", cello1.play("Pling Pling Pling"));
     }
-
-
-
 }
