@@ -1,9 +1,5 @@
 package instruments;
 
-import behaviour.IPlay;
-
-import javax.sound.midi.Instrument;
-
 public class Piano extends Instrument {
     private int pedal;
 
@@ -12,9 +8,13 @@ public class Piano extends Instrument {
         this.pedal = pedal;
     }
 
+    public int getPedal(){
+        return this.pedal;
+    }
 
-    public void instrumentSound() {
-        System.out.println("The piano says: tram-pam-pam!");
+
+    public String play(String data) {
+        return "Playing: " + data;
     }
 
 
