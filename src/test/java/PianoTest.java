@@ -45,6 +45,7 @@ public class PianoTest {
 
     @Test
     public void canCalculateMarkup(){
+
         assertEquals(50.00, piano1.calculateMarkup(100.00, 150.00), 50.00);
     }
 }

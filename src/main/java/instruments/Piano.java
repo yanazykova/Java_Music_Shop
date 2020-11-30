@@ -1,11 +1,18 @@
 package instruments;
 
-public class Piano extends Instrument {
+import behaviour.IPlay;
+import behaviour.ISell;
+
+public class Piano extends Instrument implements IPlay, ISell{
     private int pedal;
 
-    public Piano(String name, String sound, double priceBought, double priceSell, int pedal) {
-        super(name, sound, priceBought, priceSell);
+    public Piano(String type, String sound, double priceBought, double priceSell, int pedal) {
+        super(type, sound, priceBought, priceSell);
         this.pedal = pedal;
+    }
+
+    public String getType(){
+        return this.type;
     }
 
     public int getPedalsNumber(){
@@ -18,8 +25,8 @@ public class Piano extends Instrument {
     }
 
 
-    @Override
     public double canCalculateMarkup(double priceBought, double priceSell) {
-        return 0;
+        double markUpPrice = priceSell - priceBought;
+        return  markUpPrice;
     }
 }

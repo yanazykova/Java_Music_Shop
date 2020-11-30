@@ -1,6 +1,9 @@
 package instruments;
 
-public class Guitar extends Instrument {
+import behaviour.IPlay;
+import behaviour.ISell;
+
+public class Guitar extends Instrument implements IPlay, ISell{
     private int strings;
 
     public Guitar(String type, String sound, double priceBought, double priceSell, int strings) {
@@ -27,8 +30,8 @@ public class Guitar extends Instrument {
     }
 
 
-    @Override
     public double canCalculateMarkup(double priceBought, double priceSell) {
-        return 0;
+        double markUpPrice = priceSell - priceBought;
+        return  markUpPrice;
     }
 }

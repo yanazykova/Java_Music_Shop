@@ -1,6 +1,9 @@
 package instruments;
 
-public class Cello extends Instrument {
+import behaviour.IPlay;
+import behaviour.ISell;
+
+public class Cello extends Instrument implements IPlay, ISell {
     private String bow;
 
     public Cello(String type, String sound, double priceBought, double priceSell, String bow) {
@@ -26,8 +29,8 @@ public class Cello extends Instrument {
     }
 
 
-    @Override
     public double canCalculateMarkup(double priceBought, double priceSell) {
-        return 0;
+        double markUpPrice = priceSell - priceBought;
+        return  markUpPrice;
     }
 }
