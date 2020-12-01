@@ -1,9 +1,6 @@
 package instruments;
 
-import behaviour.IPlay;
-import behaviour.ISell;
-
-public class Guitar extends Instrument implements IPlay, ISell{
+public class Guitar extends Instrument{
     private int strings;
 
     public Guitar(String type, String sound, double priceBought, double priceSell, int strings) {

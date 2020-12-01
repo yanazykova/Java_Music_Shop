@@ -1,9 +1,6 @@
 package instruments;
 
-import behaviour.IPlay;
-import behaviour.ISell;
-
-public class Piano extends Instrument implements IPlay, ISell{
+public class Piano extends Instrument {
     private int pedal;
 
     public Piano(String type, String sound, double priceBought, double priceSell, int pedal) {

@@ -1,9 +1,6 @@
 package instruments;
 
-import behaviour.IPlay;
-import behaviour.ISell;
-
-public class Cello extends Instrument implements IPlay, ISell {
+public class Cello extends Instrument{
     private String bow;
 
     public Cello(String type, String sound, double priceBought, double priceSell, String bow) {
