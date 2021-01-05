@@ -1,10 +1,14 @@
 package instruments;
 
 public class Piano extends Instrument {
-    private int pedal;
+    @Override
+    public void play_sound(){
+        System.out.println("Plink, plink, plink");
+    }
+        private int pedal;
 
-    public Piano(String type, String sound, double priceBought, double priceSell, int pedal) {
-        super(type, sound, priceBought, priceSell);
+    public Piano(String type, double priceBought, double priceSell, int pedal) {
+        super(type, priceBought, priceSell);
         this.pedal = pedal;
     }
 
@@ -17,13 +21,4 @@ public class Piano extends Instrument {
     }
 
 
-    public String play(String sound) {
-        return "Playing: " + sound;
-    }
-
-
-    public double canCalculateMarkup(double priceBought, double priceSell) {
-        double markUpPrice = priceSell - priceBought;
-        return  markUpPrice;
-    }
 }

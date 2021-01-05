@@ -10,7 +10,7 @@ public class CelloTest {
 
     @Before
     public void setup(){
-        cello1 = new Cello("Performer", "Pling Pling Pling", 20.00, 40.00, "wooden");
+        cello1 = new Cello("Performer", 20.00, 40.00, "wooden");
     }
 
     @Test
@@ -18,10 +18,6 @@ public class CelloTest {
         assertEquals("Performer", cello1.getType());
     }
 
-    @Test
-    public void hasSound() {
-        assertEquals("Pling Pling Pling", cello1.getSound());
-    }
 
     @Test
     public void hasPriceBought() {
@@ -45,6 +41,6 @@ public class CelloTest {
 
     @Test
     public void canCalculateMarkup(){
-        assertEquals(20.00, cello1.calculateMarkup(20.00, 40.00), 20.00);
+        assertEquals(20.00, cello1.canCalculateMarkup(20.00, 40.00), 20.00);
     }
 }

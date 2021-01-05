@@ -10,17 +10,12 @@ public class PianoTest {
 
     @Before
     public void setup(){
-        piano1 = new Piano("Grand", "Plink Plink Plink", 100.00, 150.00, 2);
+        piano1 = new Piano("Grand", 100.00, 150.00, 2);
     }
 
     @Test
     public void hasType() {
         assertEquals("Grand", piano1.getType());
-    }
-
-    @Test
-    public void hasSound() {
-        assertEquals("Plink Plink Plink", piano1.getSound());
     }
 
     @Test
@@ -46,7 +41,7 @@ public class PianoTest {
     @Test
     public void canCalculateMarkup(){
 
-        assertEquals(50.00, piano1.calculateMarkup(100.00, 150.00), 50.00);
+        assertEquals(50.00, piano1.canCalculateMarkup(100.00, 150.00), 50.00);
     }
 }
 

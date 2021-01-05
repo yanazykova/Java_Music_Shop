@@ -1,10 +1,15 @@
 package instruments;
 
 public class Cello extends Instrument{
+    @Override
+    public void play_sound(){
+        System.out.println("Pling pling-a-pling");
+    }
+
     private String bow;
 
-    public Cello(String type, String sound, double priceBought, double priceSell, String bow) {
-        super(type, sound, priceBought, priceSell);
+    public Cello(String type, double priceBought, double priceSell, String bow) {
+        super(type, priceBought, priceSell);
         this.bow = bow;
     }
 
@@ -12,22 +17,8 @@ public class Cello extends Instrument{
         return this.type;
     }
 
-    public String getSound() {
-        return this.sound;
-    }
-
     public String getBow(){
         return this.bow;
     }
 
-
-    public String play(String sound) {
-        return "Playing: " + this.sound;
-    }
-
-
-    public double canCalculateMarkup(double priceBought, double priceSell) {
-        double markUpPrice = priceSell - priceBought;
-        return  markUpPrice;
-    }
 }

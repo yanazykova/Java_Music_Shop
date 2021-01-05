@@ -10,17 +10,12 @@ public class GuitarTest {
 
     @Before
     public void setup(){
-        guitar1 = new Guitar("Electric", "Ding Ting Ring", 20.50, 30.50, 6);
+        guitar1 = new Guitar("Electric", 20.50, 30.50, 6);
     }
 
     @Test
     public void hasType() {
         assertEquals("Electric", guitar1.getType());
-    }
-
-    @Test
-    public void hasSound() {
-        assertEquals("Ding Ting Ring", guitar1.getSound());
     }
 
     @Test
@@ -45,7 +40,7 @@ public class GuitarTest {
 
     @Test
     public void canCalculateMarkup(){
-        assertEquals(10.00, guitar1.calculateMarkup(20.50, 30.50), 10.00);
+        assertEquals(10.00, guitar1.canCalculateMarkup(20.50, 30.50), 10.00);
     }
 
 }

@@ -24,11 +24,11 @@ public class Shop {
         }
 
         public void addItemToStock(ISell item){
-            stock.add(item);
+            this.stock.add(item);
         }
 
-        public ISell removeItemFromStock(int item){
-            return stock.remove(item);
+        public void removeItemFromStock(ISell item){
+            this.stock.remove(item);
         }
 
 }

@@ -13,6 +13,14 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.8.1</version>
         </dependency>
+    
+      <dependency>
+        <groupId>io.github.pure-bits</groupId>
+        <artifactId>doobie-prometheus-core_2.12</artifactId>
+        <version>0.0.2</version>
+      </dependency>
+    
+    
     </dependencies>
 
     <properties>

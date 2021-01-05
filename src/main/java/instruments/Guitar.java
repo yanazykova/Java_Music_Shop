@@ -1,10 +1,15 @@
 package instruments;
 
 public class Guitar extends Instrument{
+    @Override
+    public void play_sound(){
+        System.out.println("Strum, strum, strum");
+    }
+
     private int strings;
 
-    public Guitar(String type, String sound, double priceBought, double priceSell, int strings) {
-        super(type, sound, priceBought, priceSell);
+    public Guitar(String type, double priceBought, double priceSell, int strings) {
+        super(type, priceBought, priceSell);
         this.strings = strings;
     }
 
@@ -13,22 +18,8 @@ public class Guitar extends Instrument{
         return this.type;
     }
 
-    public String getSound() {
-        return this.sound;
-    }
-
     public int getStringsNumber(){
         return this.strings;
     }
 
-
-    public String play(String sound) {
-        return "Playing: " + this.sound;
-    }
-
-
-    public double canCalculateMarkup(double priceBought, double priceSell) {
-        double markUpPrice = priceSell - priceBought;
-        return  markUpPrice;
-    }
 }
